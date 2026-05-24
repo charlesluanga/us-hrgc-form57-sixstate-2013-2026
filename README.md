@@ -1,7 +1,6 @@
 # Six-state FRA Form 57 analytic cohort and replication code
 
-Public materials for reproducing the locked **N = 8,394** six-state highway–rail grade crossing (HRGC) incident cohort and headline statistical results reported in the associated peer-reviewed manuscript.
-
+Public materials for reproducing the locked **N = 8,394** six-state highway–rail grade crossing (HRGC) incident cohort and headline statistical results.
 **Repository:** `https://github.com/charlesluanga/us-hrgc-form57-sixstate-2013-2026`
 
 ## What this repository contains
@@ -17,9 +16,9 @@ Public materials for reproducing the locked **N = 8,394** six-state highway–ra
 | `outputs/revision_results.json` | Precomputed headline statistics (optional verify without full re-run) |
 | `expected/key_metrics.json` | Headline numbers for automated verification |
 
-**Not included:** pre-built figure PNG/PDF files (reviewers regenerate from scripts), or conceptual Figure 1 (author-designed diagram).
 
-## Quick start (reviewers)
+
+## Quick start 
 
 ```bash
 python -m venv .venv
