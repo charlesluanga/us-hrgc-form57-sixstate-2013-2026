@@ -11,8 +11,7 @@ Outputs: each panel saved separately as PNG + PDF under outputs/figures/ (not ex
   outputs/figures/figure_cv_metrics.txt
   outputs/figures/figure_cv_metrics.json (machine-readable; drives §4.2 sync and Excel Table 7)
 
-Journal-style: Times New Roman, high-resolution raster (600 dpi PNG), vector PDF,
-no in-figure titles (captions and panel letters belong in the manuscript or slides).
+Times New Roman, high-resolution raster (600 dpi PNG), vector PDF,
 
 The linear panel uses sparse one-hot + LogisticRegression(solver="liblinear", class_weight="balanced").
 """
