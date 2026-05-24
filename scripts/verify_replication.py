@@ -1,5 +1,5 @@
 """
-Verify locked cohort and headline replication statistics (journal / reviewer check).
+Verify locked cohort and headline replication statistics.
 
 Run from repository root:
   python scripts/verify_replication.py
