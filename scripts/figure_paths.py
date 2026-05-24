@@ -1,9 +1,5 @@
 ﻿"""
-Canonical manuscript figure directory names under outputs/figures/.
-
-Main-text figures use descriptive folder names. Supplementary figures S1 and S2
-also have explicit S-prefixed folders; legacy build-script names (Figure1_CV_*,
-Figure2_RF_*) are kept as mirrors for older references.
+Canonical figure directory names under outputs/figures/.
 """
 from __future__ import annotations
 
