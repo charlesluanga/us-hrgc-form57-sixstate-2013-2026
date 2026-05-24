@@ -7,25 +7,7 @@ Assembly script: `prepare_github_release.ps1` (copies from private project)
 
 ---
 
-## What journals and reviewers typically expect
-
-Transport-safety and epidemiology journals (e.g. **Accident Analysis & Prevention**, **Transportation Research Part A/C**, **Journal of Safety Research**, **PLOS ONE**, **BMJ Open**, Nature portfolio) commonly require:
-
-| Expectation | This repository |
-|-------------|-----------------|
-| **Analysis code** that reproduces tables/figures | `scripts/run_revision_analyses.py`, figure scripts |
-| **Data** or clear access instructions | `data/all_states.csv` + FRA download note in README |
-| **Step-by-step README** | `README.md`, `REPRODUCE.md` |
-| **Software versions** | `requirements.txt`, `SOFTWARE.md` |
-| **Verification** of key results | `expected/key_metrics.json`, `scripts/verify_replication.py` |
-| **License** | `LICENSE`, `DATA_LICENSE.md` |
-| **Random seeds documented** | README + `SOFTWARE.md` (seed = 42) |
-
-They do **not** need your internal reviewer correspondence, Word drafts, or revision-round scripts.
-
----
-
-## UPLOAD THESE (public)
+## UPLOADED
 
 ### Root
 
@@ -77,35 +59,6 @@ They do **not** need your internal reviewer correspondence, Word drafts, or revi
 |------|------|
 | `revision_results.json` | Full analysis JSON for headline verification |
 
-Reviewers run figure scripts locally; outputs are not committed to GitHub.
-
----
-
-## Not shared (by design)
-
-| Item | Reason |
-|------|--------|
-| Conceptual Figure 1 | Author-designed diagram (not code-reproducible) |
-| Pre-built figure PNG/PDF | Scripts-only replication policy; avoids stale binaries |
-| `build_conceptual_framework_figure.py` | Not applicable to published Figure 1 |
-
----
-
-## DO NOT UPLOAD (keep private)
-
-| Path | Reason |
-|------|--------|
-| `manuscript/reviews/` | Reviewer correspondence |
-| `manuscript/exports/*.docx`, `*.pdf` | Submission drafts |
-| `manuscript/FULL_MANUSCRIPT.md` | Prose (optional: publish post-acceptance) |
-| `manuscript/data_sharing_PUBLISH_INSTRUCTIONS.md` | Internal AI/publish notes |
-| `manuscript/figures/FIGURE_*_WORD_LAYOUT.md` | Internal Word layout |
-| `run_round3_analyses.py`, `run_round4_analyses.py` | Superseded revision rounds |
-| `assemble_full_manuscript.py`, `inject_figure_images.py` | Manuscript assembly only |
-| `sync_cv_metrics_to_manuscript.py`, `sync_rolling_origin_prose.py` | Prose sync, not statistics |
-| `*.pdf` literature files at repo root | Copyright |
-| `Highway-Rail_Grade_Crossing_Incident_Data__Form_57_.csv` | Too large; document download |
-
 ---
 
 ## Suggested GitHub repository tree
@@ -141,7 +94,7 @@ us-hrgc-form57-sixstate-2013-2026/
 ├── expected/
 │   └── key_metrics.json
 └── outputs/
-    └── revision_results.json   # statistics only; no figures/
+    └── revision_results.json   # statistics only/
 ```
 
 ---
