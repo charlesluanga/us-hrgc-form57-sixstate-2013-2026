@@ -1,5 +1,4 @@
 ﻿"""
-Revision analyses addressing first-round reviewer comments.
 Outputs: outputs/revision_results.json
 """
 from __future__ import annotations
