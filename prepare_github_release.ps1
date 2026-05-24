@@ -1,5 +1,5 @@
 # Copy replication files from private workspace into data_sharing/ for GitHub upload.
-# Policy: statistics + figure SCRIPTS only; no pre-built figure PNG/PDF; no conceptual framework.
+# Policy: statistics + figure SCRIPTS only.
 $ErrorActionPreference = "Stop"
 $PrivateRoot = Split-Path -Parent $PSScriptRoot
 $Pub = $PSScriptRoot
