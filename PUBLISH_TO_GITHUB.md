@@ -14,7 +14,7 @@ powershell -File "..\data_sharing\prepare_github_release.ps1"
 ```powershell
 git init
 git add .
-git status   # confirm no manuscript/reviews/*.docx paths appear
+git status  
 git commit -m "Six-state FRA Form 57 cohort and replication scripts"
 ```
 
