@@ -16,14 +16,3 @@ INCLUDE:
   expected/cohort_checksums.json
   raw/.gitkeep
   raw/README.md
-
-DO NOT ADD (keep in private workspace):
-  manuscript/
-  reviews/
-  figures/
-  *.docx, *.pdf
-  AI prompts / Copilot instructions
-  reference lists / citations
-  Excel tables for publication
-  ML model outputs
-  230 MB raw FRA CSV (use raw/ locally only; .gitignore blocks it)
