@@ -38,7 +38,6 @@ Harm rate and state-level statistics are logged in `cleaning_report.txt` and `co
 
 1. Re-run `manuscript/scripts/build_manuscript_figures.py` and `build_manuscript_tables_excel.py` (hardcoded N=6,300 removed; uses `cohort_manifest.json`).
 2. Update manuscript text: **2013–2026**, **N = 8,397**, H2 speed availability, refreshed H3/recurrence metrics.
-3. See `manuscript/reviews/REVISION_CHECKLIST_DATA_V2.md` for reviewer-aligned tasks.
 
 ---
 
