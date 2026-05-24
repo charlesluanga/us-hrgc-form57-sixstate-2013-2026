@@ -25,5 +25,3 @@ git commit -m "Six-state FRA Form 57 cohort and replication scripts"
 ```powershell
 python manuscript/scripts/assemble_full_manuscript.py
 ```
-
-**Never push:** parent `manuscript/`, `reviews/`, Word/PDF exports, or FRA bulk CSV.
