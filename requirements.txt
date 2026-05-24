@@ -1,0 +1,10 @@
+# Pinned environment for replication (Python 3.12.x)
+pandas==2.3.0
+numpy==2.2.6
+scikit-learn==1.7.0
+scipy==1.16.0
+statsmodels==0.14.5
+patsy==1.0.1
+openpyxl==3.1.5
+matplotlib==3.10.3
+shap==0.47.2

@@ -1,0 +1,29 @@
+Public repository file list (audit before git push)
+====================================================
+
+INCLUDE:
+  README.md
+  LICENSE
+  requirements.txt
+  .gitignore
+  INCLUDED_FILES.txt
+  data/all_states.csv
+  data/cohort_manifest.json
+  data/DATA_CHANGELOG.md
+  data/DATA_DICTIONARY.md
+  scripts/clean_hrgc.py
+  scripts/verify_cohort.py
+  expected/cohort_checksums.json
+  raw/.gitkeep
+  raw/README.md
+
+DO NOT ADD (keep in private workspace):
+  manuscript/
+  reviews/
+  figures/
+  *.docx, *.pdf
+  AI prompts / Copilot instructions
+  reference lists / citations
+  Excel tables for publication
+  ML model outputs
+  230 MB raw FRA CSV (use raw/ locally only; .gitignore blocks it)

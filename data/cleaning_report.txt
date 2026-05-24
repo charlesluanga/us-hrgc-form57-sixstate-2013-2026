@@ -1,0 +1,33 @@
+Output directory: C:\Users\User\OneDrive\Documents\United States Data\csv
+Run timestamp   : 2026-05-17T15:26:40
+Study states    : CALIFORNIA, GEORGIA, MINNESOTA, NEW JERSEY, TEXAS, WISCONSIN
+Date window     : 2013-01-01 to 2026-12-31
+================================================================================
+Reading FRA CSV: C:\Users\User\OneDrive\Documents\United States Data\Highway-Rail_Grade_Crossing_Incident_Data__Form_57_.csv
+  - raw rows: 250,660, columns: 154
+  - User Age: recoded 7,783 zero values -> missing
+  - note: dropped non-canonical columns from 'FRA CSV cohort': ['Railroad Code', 'Railroad Name', 'Incident Year', 'Incident Month', 'Other Railroad Code', 'Other Railroad Name', 'Other Incident Number', 'Other Incident Year']...
+  - wrote California.csv (2187 rows)
+  - wrote Georgia.csv (1438 rows)
+  - wrote Minnesota.csv (525 rows)
+  - wrote New_Jersey.csv (457 rows)
+  - wrote Texas.csv (3228 rows)
+  - wrote Wisconsin.csv (559 rows)
+
+No quarantined rows (FRA CSV ingest filters by State Name only).
+
+Wrote combined: C:\Users\User\OneDrive\Documents\United States Data\csv\all_states.csv (rows=8,394, cols=48)
+
+Row counts per state:
+State Name
+CALIFORNIA    2187
+GEORGIA       1438
+MINNESOTA      525
+NEW JERSEY     457
+TEXAS         3228
+WISCONSIN      559
+
+Harm rate (Y=1): 0.3912 (3,284 / 8,394)
+Date range: 2013-01-01 to 2026-02-28
+
+Wrote manifest: C:\Users\User\OneDrive\Documents\United States Data\csv\cohort_manifest.json

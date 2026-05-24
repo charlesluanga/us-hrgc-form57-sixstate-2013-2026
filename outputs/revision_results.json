@@ -1,0 +1,956 @@
+{
+  "cohort_n": 8394,
+  "harm_rate": 0.3912318322611389,
+  "h1_bootstrap_or": {
+    "point_or": 0.7304714115024206,
+    "boot_median_or": 0.7282295422590314,
+    "ci95_low": 0.6677302826916881,
+    "ci95_high": 0.7838479136255248,
+    "n_boot_success": 1325
+  },
+  "h1_fatal_only_bootstrap_or": {
+    "point_or": 0.9157813547774093,
+    "boot_median_or": 0.8743834850044542,
+    "ci95_low": 0.7420109057083902,
+    "ci95_high": 1.0488819394937294,
+    "n_boot_success": 1325
+  },
+  "h1_injury_only_bootstrap_or": {
+    "point_or": 0.7106934465777991,
+    "boot_median_or": 0.7235683858412921,
+    "ci95_low": 0.697570269131954,
+    "ci95_high": 0.7927780109416999,
+    "n_boot_success": 1325
+  },
+  "h1_wild_cluster": {
+    "point_or": 0.7304714115024206,
+    "wild_cluster_ci95_low": 0.7304714115029334,
+    "wild_cluster_ci95_high": 0.7304714115029334,
+    "n_wild_success": 2000,
+    "hc3_or": 0.7304714115024206,
+    "hc3_ci95_low": 0.6594890460808903,
+    "hc3_ci95_high": 0.8090937767553016,
+    "n_clusters": 6
+  },
+  "h3_rho_bootstrap": {
+    "k2": {
+      "point": 0.5672959805115713,
+      "ci95_low": 0.8285973397823458,
+      "ci95_high": 0.85342355810443,
+      "min_crossing_incidents": 2,
+      "bootstrap_unit": "crossing_id"
+    },
+    "k3": {
+      "point": 0.3337393422655298,
+      "ci95_low": 0.5727378259667123,
+      "ci95_high": 0.6185821845022804,
+      "min_crossing_incidents": 3,
+      "bootstrap_unit": "crossing_id"
+    },
+    "k4": {
+      "point": 0.2259439707673569,
+      "ci95_low": 0.448612452095111,
+      "ci95_high": 0.5034756864327058,
+      "min_crossing_incidents": 4,
+      "bootstrap_unit": "crossing_id"
+    }
+  },
+  "gini_bootstrap": {
+    "point": 0.2984410831749636,
+    "ci95_low": 0.3935570817698596,
+    "ci95_high": 0.41854601539181513,
+    "bootstrap_unit": "crossing_id"
+  },
+  "h3_null_rho_permutation": {
+    "observed_rho": 0.5672959805115713,
+    "null_mean": 0.5527679049939099,
+    "null_sd": 0.006734117396901368,
+    "null_p95": 0.5636419001218027,
+    "null_p99": 0.5685140073081608,
+    "empirical_p_gt_obs": 0.0182,
+    "n_sim": 5000
+  },
+  "recurrence_descriptives": {
+    "distinct_crossings": 5321,
+    "crossings_ge2": 1566,
+    "crossings_ge3": 637,
+    "gini_incident_counts": 0.2984410831749636,
+    "pct_incidents_at_repeat_k2": 0.5526566595187038
+  },
+  "h2_speed_visibility": {
+    "S": {
+      "coef": 0.028846932183522064,
+      "or": 1.0292670347591943,
+      "pvalue": 6.358034284622611e-12
+    },
+    "V": {
+      "coef": -0.36710466006247133,
+      "or": 0.6927371393379527,
+      "pvalue": 6.778455149464015e-58
+    },
+    "S:V": {
+      "coef": 0.00799589896835972,
+      "or": 1.0080279515412731,
+      "pvalue": 0.041010889120763686
+    },
+    "S:V_crossing_cluster": {
+      "coef": 0.00799589896835972,
+      "pvalue": 0.08491833962696468
+    },
+    "n": 7557
+  },
+  "cv_full": {
+    "mean_auprc": 0.754231867211118,
+    "sd_auprc": 0.007574371422172447,
+    "mean_log_loss": 0.5162654207910823,
+    "sd_log_loss": 0.006962918006531117
+  },
+  "cv_no_damage_cost": {
+    "mean_auprc": 0.7318615117857411,
+    "sd_auprc": 0.008513856630722553,
+    "mean_log_loss": 0.5343392546216726,
+    "sd_log_loss": 0.0063286003570261415
+  },
+  "cv_fatal_only": {
+    "mean_auprc": 0.590205427304583,
+    "sd_auprc": 0.01267933778440022,
+    "mean_log_loss": 0.27860256592151283,
+    "sd_log_loss": 0.01010777524024182
+  },
+  "cv_injury_only": {
+    "mean_auprc": 0.3684077824120173,
+    "sd_auprc": 0.0068785141329045915,
+    "mean_log_loss": 0.5495907915889399,
+    "sd_log_loss": 0.005313134635731383
+  },
+  "rolling_origin": {
+    "folds": [
+      {
+        "test_year": 2015,
+        "n_train": 1294,
+        "n_test": 573,
+        "auprc": 0.7543636725944219,
+        "log_loss": 0.5763035643030195
+      },
+      {
+        "test_year": 2016,
+        "n_train": 1867,
+        "n_test": 610,
+        "auprc": 0.7700730521495299,
+        "log_loss": 0.513004572736357
+      },
+      {
+        "test_year": 2017,
+        "n_train": 2477,
+        "n_test": 628,
+        "auprc": 0.7465348771144632,
+        "log_loss": 0.5810908600904463
+      },
+      {
+        "test_year": 2018,
+        "n_train": 3105,
+        "n_test": 669,
+        "auprc": 0.7683697584320125,
+        "log_loss": 0.5340356860027441
+      },
+      {
+        "test_year": 2019,
+        "n_train": 3774,
+        "n_test": 672,
+        "auprc": 0.777047829191993,
+        "log_loss": 0.528382075219311
+      },
+      {
+        "test_year": 2020,
+        "n_train": 4446,
+        "n_test": 558,
+        "auprc": 0.7546874112193962,
+        "log_loss": 0.5259523027685812
+      },
+      {
+        "test_year": 2021,
+        "n_train": 5004,
+        "n_test": 666,
+        "auprc": 0.6449153805159605,
+        "log_loss": 0.5549084899488443
+      },
+      {
+        "test_year": 2022,
+        "n_train": 5670,
+        "n_test": 630,
+        "auprc": 0.6838297354650336,
+        "log_loss": 0.5171434478393564
+      },
+      {
+        "test_year": 2023,
+        "n_train": 6300,
+        "n_test": 659,
+        "auprc": 0.7186646908979837,
+        "log_loss": 0.5135605138737321
+      },
+      {
+        "test_year": 2024,
+        "n_train": 6959,
+        "n_test": 676,
+        "auprc": 0.7402710735400964,
+        "log_loss": 0.4966339049764378
+      },
+      {
+        "test_year": 2025,
+        "n_train": 7635,
+        "n_test": 651,
+        "auprc": 0.7536939569263045,
+        "log_loss": 0.5217457207439179
+      },
+      {
+        "test_year": 2026,
+        "n_train": 8286,
+        "n_test": 108,
+        "auprc": 0.725356463962023,
+        "log_loss": 0.44461218246789497
+      }
+    ],
+    "mean_auprc": 0.7364839918341014,
+    "mean_log_loss": 0.5256144434142203
+  },
+  "rolling_origin_unseen_crossings": {
+    "folds": [
+      {
+        "test_year": 2015,
+        "n_train": 1294,
+        "n_test_unseen_crossings": 465,
+        "n_test_all_year": 573,
+        "auprc": 0.731366662184637,
+        "log_loss": 0.5697483977288041
+      },
+      {
+        "test_year": 2016,
+        "n_train": 1867,
+        "n_test_unseen_crossings": 481,
+        "n_test_all_year": 610,
+        "auprc": 0.7509551755100486,
+        "log_loss": 0.5245723394954465
+      },
+      {
+        "test_year": 2017,
+        "n_train": 2477,
+        "n_test_unseen_crossings": 424,
+        "n_test_all_year": 628,
+        "auprc": 0.7466273000094437,
+        "log_loss": 0.5583755758502199
+      },
+      {
+        "test_year": 2018,
+        "n_train": 3105,
+        "n_test_unseen_crossings": 430,
+        "n_test_all_year": 669,
+        "auprc": 0.7930684453164113,
+        "log_loss": 0.52011871074445
+      },
+      {
+        "test_year": 2019,
+        "n_train": 3774,
+        "n_test_unseen_crossings": 439,
+        "n_test_all_year": 672,
+        "auprc": 0.761518145770727,
+        "log_loss": 0.5524792223083
+      },
+      {
+        "test_year": 2020,
+        "n_train": 4446,
+        "n_test_unseen_crossings": 353,
+        "n_test_all_year": 558,
+        "auprc": 0.69614114460331,
+        "log_loss": 0.530101747904736
+      },
+      {
+        "test_year": 2021,
+        "n_train": 5004,
+        "n_test_unseen_crossings": 395,
+        "n_test_all_year": 666,
+        "auprc": 0.617460780987981,
+        "log_loss": 0.5705025393097021
+      },
+      {
+        "test_year": 2022,
+        "n_train": 5670,
+        "n_test_unseen_crossings": 326,
+        "n_test_all_year": 630,
+        "auprc": 0.5933036962489858,
+        "log_loss": 0.5361836899131261
+      },
+      {
+        "test_year": 2023,
+        "n_train": 6300,
+        "n_test_unseen_crossings": 327,
+        "n_test_all_year": 659,
+        "auprc": 0.6607380733117979,
+        "log_loss": 0.5630364656710211
+      },
+      {
+        "test_year": 2024,
+        "n_train": 6959,
+        "n_test_unseen_crossings": 354,
+        "n_test_all_year": 676,
+        "auprc": 0.7209748363791499,
+        "log_loss": 0.4975231466887656
+      },
+      {
+        "test_year": 2025,
+        "n_train": 7635,
+        "n_test_unseen_crossings": 298,
+        "n_test_all_year": 651,
+        "auprc": 0.7303003963668312,
+        "log_loss": 0.5240332885158023
+      },
+      {
+        "test_year": 2026,
+        "n_train": 8286,
+        "n_test_unseen_crossings": 43,
+        "n_test_all_year": 108,
+        "auprc": 0.8931972789115645,
+        "log_loss": 0.37017180875797356
+      }
+    ],
+    "mean_auprc": 0.7246376613000739,
+    "mean_log_loss": 0.526403911074029,
+    "note": "Test rows restricted to crossings with zero incidents before test year."
+  },
+  "missingness": {
+    "User Age": {
+      "pct_missing": 0.17619728377412439,
+      "n_missing": 1479,
+      "harm_rate_if_missing": 0.23664638269100743,
+      "harm_rate_if_observed": 0.424295010845987
+    },
+    "Vehicle Damage Cost": {
+      "pct_missing": 0.03585894686680963,
+      "n_missing": 301,
+      "harm_rate_if_missing": 0.8372093023255814,
+      "harm_rate_if_observed": 0.3746447547263067
+    },
+    "Estimated Vehicle Speed": {
+      "pct_missing": 0.09959494877293305,
+      "n_missing": 836,
+      "harm_rate_if_missing": 0.7679425837320574,
+      "harm_rate_if_observed": 0.3495633765546441
+    },
+    "Visibility": {
+      "pct_missing": 0.00011913271384322135,
+      "n_missing": 1,
+      "harm_rate_if_missing": 0.0,
+      "harm_rate_if_observed": 0.3912784463243179
+    },
+    "age_missing_indicator": {
+      "or": 0.37704868010425807,
+      "pvalue": 4.048691598498448e-46
+    }
+  },
+  "california_audit": {
+    "n_incidents": 2187,
+    "fatality_rate_all": 0.283493369913123,
+    "harm_rate": 0.5121170553269319,
+    "fatality_share_among_harm_rows": 0.5535714285714286,
+    "injury_only_share_among_harm_rows": 0.44642857142857145,
+    "duplicate_crossing_id_rows": 1460,
+    "unique_crossings": 1205,
+    "max_killed_single_incident": 4.0,
+    "incidents_killed_ge2": 18,
+    "note": "Duplicates expected (repeat incidents); audit checks coding extremes."
+  },
+  "leakage_audit": [
+    {
+      "variable": "Vehicle Damage Cost",
+      "timing": "Post-impact",
+      "leakage_risk": "High",
+      "in_primary_ranking": "No (ablation)"
+    },
+    {
+      "variable": "Total Killed / Total Injured Form 57",
+      "timing": "Outcome definition",
+      "leakage_risk": "N/A (defines Y)",
+      "in_primary_ranking": "No (outcome only)"
+    },
+    {
+      "variable": "Narrative / text fields",
+      "timing": "Post-event documentation",
+      "leakage_risk": "High",
+      "in_primary_ranking": "No (excluded)"
+    },
+    {
+      "variable": "Visibility, weather, roadway",
+      "timing": "Incident context",
+      "leakage_risk": "Low\u2013moderate",
+      "in_primary_ranking": "Yes (context)"
+    },
+    {
+      "variable": "Estimated vehicle / train speed",
+      "timing": "Mixed (often pre-impact)",
+      "leakage_risk": "Moderate",
+      "in_primary_ranking": "H2; optional ML"
+    },
+    {
+      "variable": "User age, sex, action",
+      "timing": "Mixed",
+      "leakage_risk": "Low\u2013moderate",
+      "in_primary_ranking": "Yes (with missingness)"
+    },
+    {
+      "variable": "Warning device fields",
+      "timing": "Inventory / device (partially pre-event)",
+      "leakage_risk": "Moderate (not in core set)",
+      "in_primary_ranking": "Full model only"
+    }
+  ],
+  "national_comparison": {
+    "national_n": 28511,
+    "national_harm_rate": 0.3887973063028305,
+    "six_state_n": 8397,
+    "six_state_harm_rate": 0.3912111468381565,
+    "texas_share_national": 0.11321945915611518,
+    "texas_share_six_state": 0.3844230082172204
+  },
+  "vif_core_numerics": {
+    "Year": 1.0007858157525418,
+    "Temperature": 1.0032681450024186,
+    "Vehicle Damage Cost": 1.0035557023364672,
+    "User Age": 1.0015138962027053
+  },
+  "permutation_importance": {
+    "top_features": [
+      {
+        "feature": "cat__State Name_WISCONSIN",
+        "importance_mean": 0.09297200714711137
+      },
+      {
+        "feature": "cat__Visibility_Dark",
+        "importance_mean": 0.07849910661107803
+      },
+      {
+        "feature": "cat__State Name_TEXAS",
+        "importance_mean": 0.01762954139368672
+      },
+      {
+        "feature": "cat__Visibility_Dusk",
+        "importance_mean": 0.015902322811197144
+      },
+      {
+        "feature": "cat__Visibility_missing",
+        "importance_mean": 0.010005955926146504
+      },
+      {
+        "feature": "cat__State Name_CALIFORNIA",
+        "importance_mean": 0.003811792733770125
+      },
+      {
+        "feature": "cat__State Name_GEORGIA",
+        "importance_mean": 0.0034544371649791517
+      },
+      {
+        "feature": "cat__Visibility_Dawn",
+        "importance_mean": 0.0010720667063728428
+      },
+      {
+        "feature": "cat__State Name_MINNESOTA",
+        "importance_mean": -0.0028588445503275883
+      },
+      {
+        "feature": "cat__State Name_NEW JERSEY",
+        "importance_mean": -0.0029184038117927246
+      },
+      {
+        "feature": "cat__Visibility_Day",
+        "importance_mean": -0.0038117927337700808
+      }
+    ]
+  },
+  "visibility_harm_rates": {
+    "Dark": {
+      "n": 2282,
+      "harm_rate": 0.3426818580192813
+    },
+    "Day": {
+      "n": 4568,
+      "harm_rate": 0.420753064798599
+    },
+    "Dusk": {
+      "n": 834,
+      "harm_rate": 0.38848920863309355
+    },
+    "Dawn": {
+      "n": 709,
+      "harm_rate": 0.3610719322990127
+    }
+  },
+  "state_visibility_harm": {
+    "CALIFORNIA": {
+      "dark_harm": 0.4532488114104596,
+      "day_harm": 0.5445544554455446
+    },
+    "GEORGIA": {
+      "dark_harm": 0.2518891687657431,
+      "day_harm": 0.36728395061728397
+    },
+    "MINNESOTA": {
+      "dark_harm": 0.4567901234567901,
+      "day_harm": 0.4115942028985507
+    },
+    "NEW JERSEY": {
+      "dark_harm": 0.33858267716535434,
+      "day_harm": 0.45535714285714285
+    },
+    "TEXAS": {
+      "dark_harm": 0.29806598407281,
+      "day_harm": 0.35635964912280704
+    },
+    "WISCONSIN": {
+      "dark_harm": 0.32335329341317365,
+      "day_harm": 0.4126984126984127
+    }
+  },
+  "h1_chi2_dark_day": {
+    "chi2": 38.49594022031275,
+    "p": 5.486770063149991e-10,
+    "n": 6850
+  },
+  "pareto": {
+    "top_decile_crossings": 533,
+    "share_harm_top_decile": 0.29933008526187577
+  },
+  "state_weighted_harm": {
+    "unweighted_harm_rate": 0.3912318322611389,
+    "national_share_weighted_harm_rate": 0.39122652171545064,
+    "state_weights": {
+      "TEXAS": 0.3844230082172204,
+      "CALIFORNIA": 0.2604501607717042,
+      "GEORGIA": 0.1712516374895796,
+      "WISCONSIN": 0.06657139454567107,
+      "MINNESOTA": 0.06252232940335835,
+      "NEW JERSEY": 0.05478146957246636
+    }
+  },
+  "winsor_damage_99": {
+    "cap_usd": 65399.999999999636,
+    "n_capped": 81,
+    "cv_full": {
+      "mean_auprc": 0.754231867211118,
+      "sd_auprc": 0.007574371422172447,
+      "mean_log_loss": 0.5162654207910823,
+      "sd_log_loss": 0.006962918006531117
+    },
+    "cv_winsor": {
+      "mean_auprc": 0.7522572906599532,
+      "sd_auprc": 0.007028195144636648,
+      "mean_log_loss": 0.5175476980484904,
+      "sd_log_loss": 0.006876728260425301
+    }
+  },
+  "model_auprc_comparison": {
+    "fold_auprc_diff_hgb_minus_rf": [
+      -0.008536967603472778,
+      -0.001385849505164738,
+      -0.0005450703516663991
+    ],
+    "mean_diff": -0.003489295820101305,
+    "boot_ci95_low": -0.008536967603472778,
+    "boot_ci95_high": -0.0005450703516663991
+  },
+  "complete_case_user_age": {
+    "n": 6915,
+    "harm_rate": 0.424295010845987,
+    "h1_or": {
+      "point_or": 0.8161555204455446,
+      "boot_median_or": 0.8259012547692696,
+      "ci95_low": 0.7586789503570986,
+      "ci95_high": 0.9032023768088895,
+      "n_boot_success": 1325
+    }
+  },
+  "temporal_recurrence": {
+    "definition": "Consecutive calendar-year pairs at the same Grade Crossing ID; Y_{t+1}=1 if any injury/fatality in year t+1.",
+    "n_consecutive_pairs": 815,
+    "unconditional_p_harm_t_plus_1": 0.41595092024539876,
+    "by_incidents_in_year_t": {
+      "1": {
+        "n_pairs": 815,
+        "p_harm_year_t_plus_1": 0.41595092024539876
+      },
+      "2": {
+        "n_pairs": 126,
+        "p_harm_year_t_plus_1": 0.36507936507936506
+      },
+      "3": {
+        "n_pairs": 21,
+        "p_harm_year_t_plus_1": 0.5238095238095238
+      },
+      "baseline_any_incident_t": {
+        "n_pairs": 815,
+        "p_harm_year_t_plus_1": 0.41595092024539876
+      },
+      "single_incident_t": {
+        "n_pairs": 689,
+        "p_harm_year_t_plus_1": 0.42525399129172714
+      }
+    },
+    "by_cumulative_incidents_through_t": {
+      "2": {
+        "n_pairs": 335,
+        "p_harm_year_t_plus_1": 0.3970149253731343
+      },
+      "3": {
+        "n_pairs": 178,
+        "p_harm_year_t_plus_1": 0.4101123595505618
+      },
+      "4": {
+        "n_pairs": 110,
+        "p_harm_year_t_plus_1": 0.38181818181818183
+      }
+    },
+    "by_harm_in_year_t": {
+      "harm_in_year_t": {
+        "n_pairs": 325,
+        "p_harm_year_t_plus_1": 0.5446153846153846
+      },
+      "no_harm_in_year_t_but_incident": {
+        "n_pairs": 490,
+        "p_harm_year_t_plus_1": 0.3306122448979592
+      }
+    }
+  },
+  "rolling_origin_balanced": {
+    "folds": [
+      {
+        "test_year": 2015,
+        "n_train": 1294,
+        "n_test": 573,
+        "auprc": 0.7543636725944219,
+        "log_loss": 0.5763035643030195
+      },
+      {
+        "test_year": 2016,
+        "n_train": 1867,
+        "n_test": 610,
+        "auprc": 0.7700730521495299,
+        "log_loss": 0.513004572736357
+      },
+      {
+        "test_year": 2017,
+        "n_train": 2477,
+        "n_test": 628,
+        "auprc": 0.7465348771144632,
+        "log_loss": 0.5810908600904463
+      },
+      {
+        "test_year": 2018,
+        "n_train": 3105,
+        "n_test": 669,
+        "auprc": 0.7683697584320125,
+        "log_loss": 0.5340356860027441
+      },
+      {
+        "test_year": 2019,
+        "n_train": 3774,
+        "n_test": 672,
+        "auprc": 0.777047829191993,
+        "log_loss": 0.528382075219311
+      },
+      {
+        "test_year": 2020,
+        "n_train": 4446,
+        "n_test": 558,
+        "auprc": 0.7546874112193962,
+        "log_loss": 0.5259523027685812
+      },
+      {
+        "test_year": 2021,
+        "n_train": 5004,
+        "n_test": 666,
+        "auprc": 0.6449153805159605,
+        "log_loss": 0.5549084899488443
+      },
+      {
+        "test_year": 2022,
+        "n_train": 5670,
+        "n_test": 630,
+        "auprc": 0.6838297354650336,
+        "log_loss": 0.5171434478393564
+      },
+      {
+        "test_year": 2023,
+        "n_train": 6300,
+        "n_test": 659,
+        "auprc": 0.7186646908979837,
+        "log_loss": 0.5135605138737321
+      },
+      {
+        "test_year": 2024,
+        "n_train": 6959,
+        "n_test": 676,
+        "auprc": 0.7402710735400964,
+        "log_loss": 0.4966339049764378
+      },
+      {
+        "test_year": 2025,
+        "n_train": 7635,
+        "n_test": 651,
+        "auprc": 0.7536939569263045,
+        "log_loss": 0.5217457207439179
+      }
+    ],
+    "mean_auprc": 0.7374955852770178,
+    "mean_log_loss": 0.5329782853184316,
+    "n_folds": 11,
+    "excluded": "2026 partial year (n_test=108)"
+  },
+  "h3_rho_bootstrap_state": {
+    "k2": {
+      "point": 0.5672959805115713,
+      "ci95_low": 0.597869820631847,
+      "ci95_high": 1.0,
+      "min_crossing_incidents": 2,
+      "bootstrap_unit": "state"
+    },
+    "k3": {
+      "point": 0.3337393422655298,
+      "ci95_low": 0.3208751142509731,
+      "ci95_high": 0.8955632177074972,
+      "min_crossing_incidents": 3,
+      "bootstrap_unit": "state"
+    }
+  },
+  "gini_bootstrap_state": {
+    "point": 0.2984410831749636,
+    "ci95_low": 0.2964221041952135,
+    "ci95_high": 0.4607447336788132,
+    "bootstrap_unit": "state"
+  },
+  "concentration_sensitivity": {
+    "all_states": {
+      "label": "all_six_states",
+      "n": 8394,
+      "harm_rate": 0.3912318322611389,
+      "rho_k2": 0.5672959805115713,
+      "rho_k3": 0.3337393422655298,
+      "gini": 0.2984410831749636
+    },
+    "exclude_texas": {
+      "label": "exclude_texas",
+      "n": 5166,
+      "harm_rate": 0.42469996128532717,
+      "rho_k2": 0.5834092980856882,
+      "rho_k3": 0.3459434822242479,
+      "gini": 0.297730510606412
+    },
+    "national_share_weighted_rho": {
+      "rho_k2_weighted": 0.567304823007199,
+      "state_weight_ratios": {
+        "CALIFORNIA": 0.2944126828241731,
+        "GEORGIA": 0.29441268282417316,
+        "MINNESOTA": 0.2944126828241731,
+        "NEW JERSEY": 0.2963453700199554,
+        "TEXAS": 0.2944126828241731,
+        "WISCONSIN": 0.29441268282417316
+      },
+      "note": "Incident-level weights = national_share / cohort_share within study states."
+    }
+  },
+  "icc_harm": {
+    "state": {
+      "icc": 0.027905539506524392,
+      "n_clusters": 6,
+      "mean_cluster_size": 1399.0,
+      "ms_between": 9.575266905012949,
+      "ms_within": 0.2326321326096036
+    },
+    "crossing": {
+      "icc": 0.18570657092757584,
+      "n_clusters": 5321,
+      "mean_cluster_size": 1.577523021988348,
+      "ms_between": 0.263747911068373,
+      "ms_within": 0.19396543311769468
+    }
+  },
+  "h1_outcome_heterogeneity": {
+    "strata": {
+      "pooled_Y": {
+        "or": 0.7304714115024206,
+        "log_or": -0.31406518407749767,
+        "hc3_se_log_or": 0.05215643405775885
+      },
+      "fatal_only": {
+        "or": 0.9157813547774093,
+        "log_or": -0.08797763845819949,
+        "hc3_se_log_or": 0.07553069405608084
+      },
+      "injury_only_nonfatal": {
+        "or": 0.7106934465777991,
+        "log_or": -0.34151410027270945,
+        "hc3_se_log_or": 0.059283891546973146
+      }
+    },
+    "fatal_vs_injury_cochran_q": {
+      "Q": 6.972284584149268,
+      "df": 1,
+      "p_heterogeneity": 0.008278174170976316,
+      "pooled_log_or": -0.24486271386980363
+    }
+  },
+  "fdr_hypothesis_tests": {
+    "method": "Benjamini-Hochberg FDR",
+    "tests": [
+      {
+        "name": "H1_chi2_dark_day",
+        "p_raw": 5.486770063149991e-10,
+        "p_fdr": 2.1947080252599965e-09
+      },
+      {
+        "name": "H2_interaction_state_cluster",
+        "p_raw": 0.041010889120763686,
+        "p_fdr": 0.05468118549435158
+      },
+      {
+        "name": "H2_interaction_crossing_cluster",
+        "p_raw": 0.08491833962696468,
+        "p_fdr": 0.08491833962696468
+      },
+      {
+        "name": "H3_rho_permutation",
+        "p_raw": 0.0182,
+        "p_fdr": 0.0364
+      }
+    ]
+  },
+  "leave_one_state_out_auprc": {
+    "folds": [
+      {
+        "held_out_state": "CALIFORNIA",
+        "n_train": 6207,
+        "n_test": 2187,
+        "auprc": 0.8766741009227326
+      },
+      {
+        "held_out_state": "GEORGIA",
+        "n_train": 6956,
+        "n_test": 1438,
+        "auprc": 0.562131003651628
+      },
+      {
+        "held_out_state": "MINNESOTA",
+        "n_train": 7869,
+        "n_test": 525,
+        "auprc": 0.6618048482657641
+      },
+      {
+        "held_out_state": "NEW JERSEY",
+        "n_train": 7937,
+        "n_test": 457,
+        "auprc": 0.6716014639607396
+      },
+      {
+        "held_out_state": "TEXAS",
+        "n_train": 5166,
+        "n_test": 3228,
+        "auprc": 0.5917839846522664
+      },
+      {
+        "held_out_state": "WISCONSIN",
+        "n_train": 7835,
+        "n_test": 559,
+        "auprc": 0.6785672006665131
+      }
+    ],
+    "mean_auprc": 0.6737604336866072,
+    "note": "Leave-one-state-out; L2 logistic on x_core without damage cost."
+  },
+  "treeshap_hgb": {
+    "model": "HistGradientBoostingClassifier",
+    "feature_set": "core_excluding_damage_cost",
+    "train_years": "<=2023",
+    "explain_years": "2024-2025",
+    "n_background": 400,
+    "n_explained": 600,
+    "top_features": [
+      {
+        "feature": "cat__Highway User_Pedestrian",
+        "mean_abs_shap": 0.9237888108846458
+      },
+      {
+        "feature": "cat__Highway User Position_Moving over crossing",
+        "mean_abs_shap": 0.362432721436178
+      },
+      {
+        "feature": "num__User Age",
+        "mean_abs_shap": 0.3409094647914383
+      },
+      {
+        "feature": "num__Year",
+        "mean_abs_shap": 0.1967794383930286
+      },
+      {
+        "feature": "cat__Track Type_Main",
+        "mean_abs_shap": 0.1684307555004363
+      },
+      {
+        "feature": "num__Temperature",
+        "mean_abs_shap": 0.1337192547983432
+      },
+      {
+        "feature": "cat__Highway User Position_Stalled or stuck on crossing",
+        "mean_abs_shap": 0.11634224432538597
+      },
+      {
+        "feature": "cat__Highway User_Truck-trailer",
+        "mean_abs_shap": 0.09638956946088276
+      },
+      {
+        "feature": "cat__State Name_CALIFORNIA",
+        "mean_abs_shap": 0.05455663130262925
+      },
+      {
+        "feature": "cat__Visibility_Dark",
+        "mean_abs_shap": 0.05009188055793748
+      },
+      {
+        "feature": "cat__Highway User_Other",
+        "mean_abs_shap": 0.04845614304782257
+      },
+      {
+        "feature": "cat__Visibility_Day",
+        "mean_abs_shap": 0.046440403430756075
+      },
+      {
+        "feature": "cat__State Name_TEXAS",
+        "mean_abs_shap": 0.040827123991730246
+      },
+      {
+        "feature": "cat__Track Type_Yard",
+        "mean_abs_shap": 0.03628148672913715
+      },
+      {
+        "feature": "cat__Highway User_Truck",
+        "mean_abs_shap": 0.036212114486605614
+      },
+      {
+        "feature": "cat__Highway User Position_Stopped on crossing",
+        "mean_abs_shap": 0.033572057139087084
+      },
+      {
+        "feature": "cat__Roadway Condition_Dry",
+        "mean_abs_shap": 0.026561455503318836
+      },
+      {
+        "feature": "cat__Highway User_Auto",
+        "mean_abs_shap": 0.024752634449707288
+      },
+      {
+        "feature": "cat__Weather Condition_Clear",
+        "mean_abs_shap": 0.019750076410436204
+      },
+      {
+        "feature": "cat__Weather Condition_Cloudy",
+        "mean_abs_shap": 0.01954426503483162
+      }
+    ],
+    "note": "TreeSHAP on preprocessed design matrix; associational ranking only."
+  }
+}

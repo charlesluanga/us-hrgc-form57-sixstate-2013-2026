@@ -1,0 +1,15 @@
+{
+  "cohort_n": 8394,
+  "harm_rate": 0.391,
+  "rho_hat": 0.567,
+  "h3_permutation_p": 0.018,
+  "h3_fdr_p": 0.036,
+  "rolling_origin_mean_auprc": 0.737,
+  "unseen_crossing_mean_auprc": 0.725,
+  "leave_one_state_out_mean_auprc": 0.674,
+  "cv_with_damage_mean_auprc": 0.754,
+  "cv_no_damage_mean_auprc": 0.732,
+  "h1_or_dark_vs_day": 0.73,
+  "california_fatality_share_among_harm": 0.554,
+  "note": "Tolerance ±0.001 for rates; ±0.01 for OR; see scripts/verify_replication.py"
+}
