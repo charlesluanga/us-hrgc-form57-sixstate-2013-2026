@@ -1,7 +1,6 @@
 ﻿"""
-Build manuscript tables workbook (multi-sheet, publication-style formatting).
 Source of truth for counts: csv/all_states.csv (see csv/cohort_manifest.json for N and date window).
-Figure 1 CV metrics (Table 7): read outputs/figures/figure_cv_metrics.json (from build_manuscript_figures.py).
+Figure 1 CV metrics (Table 7): read outputs/figures/figure_cv_metrics.json.
 """
 from __future__ import annotations
 
